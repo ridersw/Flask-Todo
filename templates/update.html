@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block head %} 
+
+<title>App Using Flask</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+<div class="content">
+	<h1 align="center">Update Task</h1>
+	<br>
+	<form action="/update/{{task.id}}" method="POST">
+		<input type="text" name="content" id="content" value="{{task.content}}">
+		<input type="submit" value="Update Task">
+	</form>
+
+</div>
+
+{% endblock %}
